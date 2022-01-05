@@ -21,13 +21,13 @@ console.log('x = ', x);
 console.log('x ** y =', x ** y);
 
 // Prefix and Postfix 
-let x = 1;
-let y = x++;
-let z = ++x;
+let n1 = 1;
+let n2 = x++;
+let n3 = ++x;
 console.log('Postfix');
-console.log(y);
+console.log(n2);
 console.log('Prefix');
-console.log(z);
+console.log(n3);
 
 
 // if else statements
@@ -88,3 +88,19 @@ prime : for(let i = 2; i < limit; i++){
 }
 
 // Switch statement
+let test_num = +prompt('a?', '');
+
+switch (test_num) {
+  case 0:
+    console.log(0);
+    break;
+
+  case 1:
+    console.log(1);
+    break;
+
+  case 2:
+  case 3:
+    console.log('2,3');
+    break;
+}
