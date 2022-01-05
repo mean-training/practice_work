@@ -88,19 +88,49 @@ prime : for(let i = 2; i < limit; i++){
 }
 
 // Switch statement
-let test_num = +prompt('a?', '');
-
-switch (test_num) {
-  case 0:
-    console.log(0);
-    break;
-
-  case 1:
-    console.log(1);
-    break;
-
-  case 2:
-  case 3:
-    console.log('2,3');
-    break;
+let sum = +prompt('Enter the sum of any number','');
+switch(sum){
+    case 3:
+        console.log("too small");
+        break;
+    case 4:
+        console.log('exact same value');
+        break;
+    case 5:
+        console.log('Too big value');
+        break;
+    default:
+        console.log('Unknown value');
+        break;     
 }
+
+let d = +prompt('Enter a number','');
+switch(d){
+    case 0:
+        console.log(0);
+        break;
+    case 1:
+        console.log(1);
+        break;
+    case 2:
+    case 3:
+        console.log('2,3'); 
+        break;
+    default:
+        console.log('Undefined');                   
+}
+
+// Function Declaration
+function printMessage(){
+    console.log("Hello World");
+}
+printMessage();
+
+function showCount(value){
+    console.log(value ?? 'null');
+}
+showCount(21);
+
+
+
+
