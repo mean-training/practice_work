@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice work</title>
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <p id='test'></p>
+        <script>
+            document.getElementById('test').innerHTML = 'Javascript in html';
+            try{
+                const PI = '3.141592653589793';
+                PI = '3.14';
+            }catch(error){
+                document.getElementById('test').innerHTML = error;
+            }
+        </script>
+    </body>
+</html>
