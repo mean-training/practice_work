@@ -2,10 +2,38 @@
 <html>
     <head>
         <title>Day 2</title>
-        <script src="objects.js"></script>
+        <!-- <script src="events.js"></script> -->
+        <script src="numbers.js"></script>
+        <!-- <script src="objects.js"></script> -->
     </head>
     <body>
         <button>Click Me</button>
+        <button onclick="replaceDocument()">Replace Document</button>
+
         <p>Try to Change me</p>
+        <p>When you submit the form, a function is triggered which alerts some text.</p
+
+        <form action="javascript:void(0)"  onsubmit="myFunction()">
+            Enter name : <input type="text" name="fname">
+            <input type="submit" value="Submit">
+        </form>
+
+        <img src="../assets/images/dummy.jpg" alt="panda" width="150px" height="150px" onmouseover="bigImg(this)" onmouseout="smallImage(this)">
+
+        <script>
+            window.setTimeout(function(){
+                console.log('log from set timeout function');
+            },3000);
+            const myFunction = ()  => console.log('Form submitted');
+            const bigImg     = (x) => {
+                x.style.width  = '200px';
+                x.style.height = '200px';
+            }
+            const smallImage = x => {
+                x.style.width  = '150px';
+                x.style.height = '150px';
+            }
+            const replaceDocument = () => location.replace('https://www.w3schools.com');
+        </script>        
     </body>
 </html>
