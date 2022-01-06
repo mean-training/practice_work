@@ -40,7 +40,7 @@ function askSomething(query, positive, negative){
 }
 
 function positiveCase(){
-    console.log('Posituve case');
+    console.log('Positive case');
 }
 
 function negativeCase(){
@@ -67,3 +67,45 @@ askSomething('Do you find something intresting',
 () => console.log('Positive one'),
 () => console.log('Negative one')
 )
+
+// Nested Function
+function addNum(a,b)
+{
+  function logToConsole(message){
+    console.log(message);
+  }
+ 
+  let result = a + b;
+  logToConsole("result is " + result)
+} 
+addNum(1,2);
+
+function outerFunction(a){
+    console.log('outer function');
+    innerFunction = function(){
+        console.log('inner function ' + a );
+        innermostFunction = function(){
+            console.log('innermost function ' + a);
+        }
+        return innermostFunction();
+    }
+    return innerFunction();
+}
+outerFunction(10);
+
+// Constructor function
+function person(first_name,age){
+    this.first_name = first_name,
+    this.age        = age
+}
+
+let person1 = new person('John',18);
+person1.last_name = 'Doe';
+console.log(person1);
+let person2 = new person('Alex',21);
+console.log(person2);
+
+person1.greet = function(){
+    console.log(`Hello ${person1.first_name}`);
+}
+person1.greet();
