@@ -1,11 +1,11 @@
-let user = {
+let test_user = {
     name : "John",
     age  : "18"
 }
 let key = prompt('What you want to know about user?', '');
-console.log(user[key]);
+console.log(test_user[key]);
 
-var greet = {
+var greet_user = {
     first_name : "John",
     last_name  : "Doe",
     full_name : function(){
@@ -16,8 +16,8 @@ var greet = {
     }  
 }
 
-console.log(greet.full_name());
-greet.greetings('Good Morning', greet.full_name());
+console.log(greet_user.full_name());
+greet_user.greetings('Good Morning', greet_user.full_name());
 
 // Computed Properties
 let fruit  = prompt("Enter the fruit","");
@@ -29,8 +29,8 @@ let bag = {
 console.log(bag);
 console.log(bag[fruit]);
 
-console.log("name" in  user);
-console.log("greetings" in user);
+console.log("name" in  test_user);
+console.log("greetings" in test_user);
 
 let user_detail = {
     first_name : 'John',
@@ -133,17 +133,17 @@ const person4 = {
 let m = person3.fullName.call(person4);
 console.log(m);
 
-let user = {name : 'user'};
+let t_user = {name : 'user'};
 let admin1 = {name : 'admin'};
 
 function sayHello(){
     console.log(this.name);
 }
 
-user.greeting = sayHello;
+t_user.greeting = sayHello;
 admin1.greeting = sayHello;
 
-user.greeting();
+t_user.greeting();
 admin1.greeting();
 
 

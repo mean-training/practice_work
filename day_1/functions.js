@@ -50,8 +50,8 @@ function negativeCase(){
 askSomething('Do you find something intresting', positiveCase, negativeCase);
 
 // Arrow Functions
-let sum = (a,b) =>  a + b;
-console.log(sum(10,20));
+let add  = (a,b) =>  a + b;
+console.log(add(10,20));
 
 let double = n => n * 2;
 console.log(double(5));
