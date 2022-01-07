@@ -70,3 +70,65 @@ for(let x in keys){
     text1 += x + " ";
 }
 console.log(text1);
+
+
+let styles = ["Jazz","Blues"];
+styles  .push("Rock-n-Roll");
+styles[Math.floor(styles.length - 1) / 2] = "Classics";
+styles.shift();
+styles.push("Rap","Raggie");
+console.log(styles);
+
+function sumInput(){
+    let input = [];
+    let sum   = 0;
+    while(true){
+        let value = prompt('Enter a number : ', 0);
+        if(value === '' || value === 'undefined' || !isFinite(value)) break;
+        input.push(+value);
+    }
+    console.log(input);
+    for(let x of input){
+        sum += x;
+    }
+    console.log(sum);
+}
+sumInput();
+
+function getMaxSubSum(array){
+    let total_sum = 0;
+    let partial_sum = 0;
+
+    for(let num of array){
+        partial_sum += num;
+        total_sum = Math.max(total_sum,partial_sum);
+        if(partial_sum < 0) partial_sum = 0;
+    }
+    return total_sum;
+}
+console.log(getMaxSubSum([-1, 2, 3, -9]));
+console.log(getMaxSubSum([-1, 2, 3, -9, 11]));
+console.log(getMaxSubSum([-2, -1, 1, 2]));
+
+function filterRangeInPlace(arr,a,b){
+    for(let i = 0; i < arr.length; i++){
+        let num = arr[i];
+        if(num < a || num > b){
+            arr.splice(i,1);
+            i--;
+        }
+    }
+    console.log(arr);
+}
+filterRangeInPlace([1,2,18,5,12],10,20);
+
+function copySorted(arr){
+    return arr.slice().sort();
+}
+
+let lang   = ["Javascript","HTML","CSS"];
+let sorted = copySorted(lang);
+
+console.log(lang);
+console.log(sorted);
+
