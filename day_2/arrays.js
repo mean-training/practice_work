@@ -40,3 +40,33 @@ function findAge(age){
 const findIndex = ages_1.findIndex(findAge);
 console.log('Find Index');
 console.log(findIndex);
+
+fruits.forEach(iterateArray);
+function iterateArray(item, index){
+    console.log(index + ' : '  + item);
+}
+
+let text = 'ABCDEF';
+let my_array = Array.from(text);
+console.log(my_array);
+
+console.log("Includes function  ");
+console.log(fruits_1.includes("Kiwi"));
+
+console.log(fruits);
+console.log("Index Of : " + fruits.indexOf('Mango'));
+console.log("Index Of : " + fruits.indexOf('Mango',2));
+
+let string = "Test text";
+console.log('Is Array : ' + Array.isArray(fruits));
+console.log('Is Array : ' + Array.isArray(string));
+
+console.log("Join: " + fruits.join());
+
+const myArr = ["Banana", "Orange", "Apple", "Mango"];
+let keys = Object.keys(myArr);
+let text1 = "";
+for(let x in keys){
+    text1 += x + " ";
+}
+console.log(text1);
