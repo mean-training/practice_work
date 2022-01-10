@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Day 3</title>
+        <!-- <script src="date.js"></script> -->
+        <script src="promise.js"></script>
+    </head>
+    <body>
+        <p>Click the button to display the date</p>
+        <button onclick="displayDate()">Click Me</button>
+        <p id=demo></p>
+        <form name="myForm" action="javascript:void(0)" onsubmit="return validateForm()" method="post">
+            Name : <input type="string" name="fname">
+            <p id="name" style="color: red;"></p>
+            Enter the age : <input type="string" name="age">
+            <p id="integer" style="color: red;"></p>
+            <input type="submit" value="submit">
+        </form>
+
+        <script>
+            function displayDate(){
+                document.getElementById('demo').innerHTML = Date();
+            }
+
+            function validateForm(){
+                let x = document.forms['myForm']['fname'].value;
+                try{
+                    if(x == '') throw "can't be empty";
+                }catch(err){
+                    document.getElementById('name').innerHTML = "Name can't be empty"
+                }
+                finally{
+                    document.getElementById('name').innerHTML = "logging from final block"
+                }
+              
+
+                let number = document.forms["myForm"]["age"].value;
+                console.log(isNaN(number));
+                if(isNaN(number) || number == ''){
+                    console.log("Number can't be empty nor a non-integer number");
+                    document.getElementById('integer').innerHTML = "Number can't be empty nor a non-integer number";
+                }else{
+                    console.log(number);
+                }
+            }
+        </script>
+    </body>
+</html>
